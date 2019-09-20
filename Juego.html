@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="scripts.js"></script>
+	<title>Juego</title>
+</head>
+<body>
+<!--Barra de navegacion -->
+		<nav class="navbar fixed-top navbar-expand navbar-dark" id="nav">
+  <div class="navbar-brand" >Rocío Aragón</div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="formulario.html">Formulario</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="Juego.html">Juego</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Curriculum.html">Curriculum</a>
+      </li>
+    </ul>
+  </div>
+</nav> 
+<!--juego -->
+<div id="juego"><h2>Adivina la contraseña!</h2>
+<p>El juego consiste en adivinar una contraseña de tres dígitos</p>
+<ul>
+	<li>Se debe ingresar un dígito del 0 al 9 en cada casilla</li>
+	<li>Los valores no se pueden repetir</li>
+	<li>No puede quedar ningún campo vacio</li>
+</ul>
+<h2>Suerte!</h2></div>
+<div class="row">
+	<div class="col-md-9">
+	<form>
+<div class="num"><label for="centena">centena: </label><input type="number" id="centena"><span id="cen"></span></div>
+<div class="num"><label for="decena">decena: </label><input type="number" id="decena"><span id="dec"></span></div>
+<div class="num"><label for="unidad">unidad: </label> <input type="number" id="unidad"><span id="un"></span></div>
+  <input type="button" class="btn btn-success col-sm-2" value="enviar" onClick="adivinar()">
+  <input type="reset" class="btn btn-danger col-sm-2" value="borrar" onClick="erase()">
+  <p id="alerta"></p>
+</form>
+</div>
+<div class="col-md-3">
+	<div>Intentos: <span id="intento"></span></div>
+
+</div>
+</div>
+
+</body>
+</html>

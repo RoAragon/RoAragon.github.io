@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/4.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Formulario</title>
+</head>
+<body style="background-image: url(back.jpg);">
+<!--Barra de navegacion -->
+		<nav class="navbar fixed-top navbar-expand navbar-dark" id="nav">
+  <div class="navbar-brand" href="#">Rocío Aragón</div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="formulario.html">Formulario</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Juego.html">Juego</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Curriculum.html">Curriculum</a>
+      </li>
+    </ul>
+  </div>
+</nav> 
+
+<br>
+
+ <div class="col-sm-2" ></div>
+ <div class="container rounded col-sm-8" id="container" >
+    <div class="row">
+     <div class="col-sm-1"></div>
+     <div class="col-sm-10">
+       <form class="form-group">
+        <fieldset>
+         <div > <p>Datos personales</p> 
+         
+         <div class="formulario">
+
+           <div class="form-group row">
+             <label for="name" class="col-sm-2 col-form-label">*Nombre: </label>
+             <div class="col-sm-5">
+               <input type="text" class="form-control" placeholder="Nombre" value="" id="name"  required >
+             </div>
+             <div class="col-sm-5">
+              <input type="text" class="form-control" placeholder="Apellido" value="" required id="last" >
+            </div>
+          </div>
+
+          <div class="form-group row">
+           <label for="date"class="col-sm-3 col-form-label">*Fecha de nacimiento: </label>
+           <div class="col-sm-4">
+            <input type="date" class="form-control" value="" id="date" required>
+          </div>
+          <legend class="col-form-label col-sm-1 pt-0">Sexo</legend>
+          <div class="col-sm-4">
+            <div class="form-check form-check-inline">
+             <input class="form-check-input gender" type="radio"  name="radio" id="gridRadios1" value="hombre">
+             <label class="form-check-label gender" for="gridRadios1"> Hombre</label>
+           </div>
+           <div class="form-check form-check-inline">
+             <input class="form-check-input gender" type="radio" name="radio" id="gridRadios2" value="Mujer">
+             <label class="form-check-label" for="gridRadios2"> Mujer</label>
+           </div>
+         </div>
+       </div>
+       
+       <div class="form-group row">
+         <label for="email" class="col-sm-2 col-form-label">*Email: </label>
+         <div class="col-sm-4">
+           <input type="email" value="" class="form-control" id="email"  required>
+         </div>
+
+         <label for="num" class="col-sm-2 col-form-label" >Teléfono: </label>
+         <div class="col-sm-4">
+           <input placeholder="Con código de área" type="tel" value="" class="form-control" id="num">
+         </div>
+       </div>
+       <div class="form-group row">
+         <div class="col-sm-3">
+         </div>
+         <div class="col-sm-6" id="obligatorio">*Campos obligatorios
+         </div>
+         <div class="col-sm-3">
+         </div>
+       </div>
+       </div>
+     </fieldset>
+     <br>
+     <fieldset>
+    <div class="form-group row">
+     <label for="curso" class="col-form-label  col-sm-8">En cuál de nuestras actividades estás interesado?
+     </label>
+     <select class="form-control col-sm-4" id="curso">
+       <option value="0">...</option>
+       <option value="Trk">Trekking</option>
+       <option value="Camp">Campamento</option>
+       <option value="Cab">Cabalgatas</option>
+       <option value="MBike">Mountain bike</option>
+     </select> 
+   </div>
+ <div class="form-group row">
+   <div class="form-group col-sm-8">
+     <label for="how">¿Cómo te enteraste de nuestras actividades?</label>
+     <textarea class="form-control " id="how" value="" placeholder="Escriba aquí" ></textarea>
+   </div>
+ </div>
+ <div class="form-group row">
+   <div class="form-inline col-sm-11">
+     <label class="form-check-label" for="ofertas">
+      ¿Deseas recibir ofertas de otras actividades en tu email?
+    </label>
+    <input class="form-check-input col-sm-1" type="checkbox"  checked id="ofertas">
+  </div>
+</div>
+
+<div class="form-group row ">
+ <div class="col-sm-2"> </div>
+ <input class="btn btn-success col-sm-3" type="button" onclick="envio();" id="send" value="Ingresar datos">
+ <div class="col-sm-2"> </div>
+ <input class="btn btn-danger col-sm-3" type="reset" value="Borrar">
+ <div class="col-sm-2"> </div>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+<div class="col-sm-2"></div>
+</div>
+<br>
+<!--Tabla -->
+<div id="table" style="background-color: #6b7374 ;">
+  <br>
+  <table class="table table-hover table-sm table-bordered table-responsive" id="tabla" style="background-color:white">
+    <thead id="encabezado">
+     <tr>
+       <th>Nombre</th>
+       <th>Apellido</th>
+       <th>Fecha Nac</th>
+       <th>Sexo</th>
+       <th>Telefono</th>
+       <th>Email</th>
+       <th>Actividad</th>
+       <th>Acerca</th>
+       <th>Ofertas</th>
+       <th>Quitar</th>
+     </tr>
+   </thead>
+
+   <tbody id="tbody">
+   </tbody>
+   <tfoot></tfoot>
+ </table>
+ <p id="alerta"></p>
+ <div>
+  <input type="button" class="btn btn-dark" value="exportar a excel" onclick="tableToExcel('tabla','asdf');" name="">
+</div>
+</div>
+</body>
+<script type="text/javascript" src="form.js"></script>
+
+
+</html>

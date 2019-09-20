@@ -1,0 +1,29 @@
+#body{
+	background-color: #e3ded6;
+}
+#nav{
+	background-color: #6b7374 ;
+}
+#container{
+	border: dotted;
+	border-color:#6b7374;
+	margin-top: 40px;
+	padding-top: 20px;
+	background-color: white;
+}
+#juego{
+	padding-top: 60px;
+	padding-left: 20px;
+}
+.num{
+	padding-left: 20px;
+	margin-top: 10px;
+}
+span{
+	margin-left: 5px;
+}
+#form{
+	background-color:#e9ecef;
+	padding-top: 10px;
+	 margin-top: 50px;">
+}
