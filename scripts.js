@@ -1,34 +1,36 @@
 function envio() {
+  var peso= document.getElementById("weight").value;
+  var peso1=document.getElementById("prim").value;
+  var peso2=document.getElementById("seg").value;
+  var peso4=document.getElementById("cuart").value;
+  var porc1=(peso1*100)/peso;
+  var porc2=(peso2*100)/peso;
+  var porc4=(peso4*100)/peso;
   
-  var nombre=document.getElementById("name").value;
-  var ap=document.getElementById("last").value;
-  var date=document.getElementById("date").value;
-  var tel=document.getElementById("num").value;
-  var email=document.getElementById("email").value;
-  var curso=document.getElementById("curso").value;
-  var how=document.getElementById("how").value;
+  var fecha=document.getElementById("date").value;
+  var hora=document.getElementById("hora").value;
+  var lote=document.getElementById("lote").value;
+  var variedad=(document.getElementById("var").value)+"\n"+(document.getElementById("productor").value);
+
+ //* document.getElementById('porc1').innerHTML = porc1;
+ //* document.getElementById('porc2').innerHTML = porc2;
+  //*document.getElementById('porc4').innerHTML = porc4;
   
-  var gender=document.getElementsByName("radio");
-  for (var i =0; i <gender.length; i++) {
-    if (gender[i].checked) {
-      var gen=gender[i].value;
-    }
+  var color=document.getElementById("color").value;
+  var calibre=document.getElementById("calibre").value;
+  var brix=document.getElementById("brix1").value +"\n"+ document.getElementById("brix2").value +"\n"+ document.getElementById("brix3").value
+  var presion=document.getElementById("presion").value;
+  var ting=document.getElementById("ting").value;
+  var defectos=document.getElementById("def").value;
+  var veh=document.getElementById("veh").value;
+  var firmaresp="";
+  var firmaver="";
+
+  formulario=[fecha, hora, lote, variedad, porc1, porc2, porc4, color, calibre, brix, presion, ting, defectos, veh, firmaresp, firmaver]
+  if ((porc1+porc2+porc4)>100) {
+    alert("revisar peso")
   }
-  
-  var est=document.getElementsByName("radio1");
-  for (var j =0; j<est.length; j++) {
-    if (est[j].checked) {
-      var estudio=est[j].value;
-    }
-  }
-  var oferta=document.getElementById("ofertas").checked;
-  formulario=[nombre, ap, date, gen, tel, email, curso, how, oferta]
-  if ((nombre=="")||(ap=="")||(date=="")||(email=="")) {
-    alert("Debe completar todos los campos obligatorios")
-  }
-  else{
-    alert("En breve te llegará un mail con información de nuestros cursos");
-    
+ else{
     var row = document.createElement("tr");
     for (var j = 0; j <formulario.length; j++) {
       var celda = document.createElement("td");
@@ -41,6 +43,8 @@ function envio() {
     row.appendChild(celda10);                
     document.getElementById("tbody").appendChild(row);
   }
+  
+    
 }
 function borrar(r) {
   var i = r.parentNode.parentNode.rowIndex;
